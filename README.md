@@ -1,12 +1,39 @@
 # ![Base16](logo.png)
 
-An architecture for building themes based on carefully chosen syntax highlighting using a base of sixteen colors. Base16 provides a set of guidelines detailing how to style syntax and how to code a _builder_ for compiling Base16 _schemes_ and _templates_.
+An architecture for building themes based on carefully chosen syntax 
+highlighting using a base of sixteen colors.
 
-## Documentation
+It allows user to have a consistent look across different programs.
 
-* [Styling Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md)
-* [Builder Guidelines](https://github.com/chriskempson/base16/blob/master/builder.md)
-* [File Guidelines](https://github.com/chriskempson/base16/blob/master/file.md)
+See [List of supported programs](#template-repositories) on how to apply base16 themes on your favorate program.
+
+## Documentation and Specification
+Base16 provides a set of guidelines detailing how to style syntax and
+how to code a _builder_ for compiling Base16 _schemes_ and _templates_.
+
+### Scheme
+A scheme is a list of 16 colors to be used as a base to build themes.
+To make base16 look consistent, each color will be used for similar purpose in different programs.
+See [Styling Guidelines](https://github.com/chriskempson/base16/blob/master/styling.md) for more info on how each color should be used.
+
+A scheme is defined using a yaml file. File specification is in 
+[File Guidelines](https://github.com/chriskempson/base16/blob/master/file.md#scheme-files)
+
+### Builder
+A builder is a build tool used by various template repositories to generate files based on scheme file and template file.
+
+
+[Builder Guidelines](https://github.com/chriskempson/base16/blob/master/builder.md)
+
+### Template
+A template defines how theme file(s) should be generated for a specific program.
+
+It is typically installed directly by end user to use different base16 themes.
+
+A template repository typically defines a template file, then uses a builder to generate program specific theme files with the template file.
+
+A template file will be used by builder to generate them.
+File specification is in [Template section in File Guidelines](https://github.com/chriskempson/base16/blob/master/file.md#template-config-files) 
 
 ## Template Repositories
 
